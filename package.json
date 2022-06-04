@@ -1,12 +1,13 @@
 {
-  "name": "mdutils",
+  "name": "@dragosbulugean/mdutils",
   "version": "1.0.0",
   "description": "Compiles & bundles md utils to commonjs.",
   "main": "./dist/lib.js",
   "types": "./dist/lib.d.ts",
   "scripts": {
     "start": "node dist/src.js",
-    "build": "rm -rf dist && webpack --config webpack.config.js"
+    "build": "rm -rf dist && webpack --config webpack.config.js",
+    "pub": "npm publish --access=public"
   },
   "author": "Dragos Bulugean",
   "license": "MIT",
