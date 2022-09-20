@@ -10,6 +10,7 @@ import remarkDirective from 'remark-directive';
 import remarkSqueezeParagraphs from 'remark-squeeze-paragraphs';
 import rehypeRaw from 'rehype-raw';
 import { toMarkdown } from 'mdast-util-to-markdown';
+import { toString } from 'mdast-util-to-string';
 import { toMdast } from 'hast-util-to-mdast';
 import { gfm } from 'micromark-extension-gfm';
 import { gfmFromMarkdown, gfmToMarkdown } from 'mdast-util-gfm';
@@ -34,6 +35,7 @@ declare const _default: {
     visit: (<Tree extends import("unist").Node<import("unist").Data>, Check extends import("unist-util-is").Test>(tree: Tree, test: Check, visitor: import("unist-util-visit/complex-types").BuildVisitor<Tree, Check>, reverse?: boolean | undefined) => void) & (<Tree_1 extends import("unist").Node<import("unist").Data>>(tree: Tree_1, visitor: import("unist-util-visit/complex-types").BuildVisitor<Tree_1, string>, reverse?: boolean | undefined) => void);
     toMarkdown: typeof toMarkdown;
     fromMarkdown: ((value: import("micromark-util-types").Value, encoding: import("micromark-util-types").Encoding, options?: import("mdast-util-from-markdown/lib").Options | undefined) => import("mdast").Root) & ((value: import("micromark-util-types").Value, options?: import("mdast-util-from-markdown/lib").Options | undefined) => import("mdast").Root);
+    toPlainText: typeof toString;
     unistFlatMap: any;
     gfm: typeof gfm;
     gfmFromMarkdown: typeof gfmFromMarkdown;

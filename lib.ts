@@ -17,6 +17,7 @@ import rehypeStringify from 'rehype-stringify'
 import rehypeRaw from 'rehype-raw'
 import { toMarkdown } from 'mdast-util-to-markdown'
 import { fromMarkdown } from 'mdast-util-from-markdown'
+import { toString } from 'mdast-util-to-string'
 import { visit } from 'unist-util-visit'
 import { toMdast } from 'hast-util-to-mdast'
 import { gfm } from 'micromark-extension-gfm'
@@ -55,6 +56,7 @@ export default {
   visit,
   toMarkdown,
   fromMarkdown,
+  toPlainText: toString, 
   unistFlatMap: flatMap,
   gfm,
   gfmFromMarkdown,
